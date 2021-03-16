@@ -13,6 +13,6 @@
 - 开源软件
   - [java开源软件](soft/java.md)
   - [golang开源软件](soft/golang.md)
-  - [产品开源软件](soft/peoduct.md)
+  - [产品开源软件](soft/product.md)
 
 - [docsify使用安装](article/docsify.md)
