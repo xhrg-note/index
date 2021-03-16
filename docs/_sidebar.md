@@ -2,16 +2,16 @@
   - [总体规划](article/techs.md)
 
 - 性能优化
-  - [linux常用命令](linux/linux_tools.md)
-  - [linux常用命令](linux/linux_tools.md)
-  - [linux常用命令](linux/linux_tools.md)
-  - [linux常用命令](linux/linux_tools.md)
-  - [linux常用命令](linux/linux_tools.md)
+  - [linux常用命令1](linux/linux_tools.md)
+  - [linux常用命令2](linux/linux_tools.md)
+  - [linux常用命令3](linux/linux_tools.md)
+  - [linux常用命令4](linux/linux_tools.md)
+  - [linux常用命令5](linux/linux_tools.md)
 
 - 基础知识
-  - [网络]
-  - 存储
-  - 算法
+  - [网络](e.md)
+  - [存储](e.md)
+  - [算法](e.md)
 
 - 开源软件
   - [java开源软件](e.md)
