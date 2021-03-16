@@ -1,7 +1,7 @@
 
 
 * [一、基础架构](article/techs.md)
-  * [中间件]()
+  * [中间件](article/techs.md)
     * 配置中心
     * 网关
     * 消息队列
