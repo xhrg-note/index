@@ -11,8 +11,8 @@
   - [算法](e.md)
 
 - 开源软件
-  - [java开源软件](e.md)
-  - [golang开源软件](e.md)
-  - [产品开源软件](e.md)
+  - [java开源软件](soft/java.md)
+  - [golang开源软件](soft/golang.md)
+  - [产品开源软件](soft/peoduct.md)
 
 - [docsify使用安装](article/docsify.md)
