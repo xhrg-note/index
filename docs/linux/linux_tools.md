@@ -9,3 +9,9 @@
 > netstat -tunlp | grep 8080
 
 
+
+
+
+## wrk
+
+* wrk -d10m -t128 -c3000  -H"Host: www.domain.com" http://127.0.0.1:8000/query
