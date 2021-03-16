@@ -1,6 +1,9 @@
 # 快速链接
 * [linux-tools](linux/linux_tools.md)
 
+# github
+* [rocketmq](https://github.com/apache/rocketmq)
+* [shardingshphere](https://github.com/apache/shardingsphere/)
 
 # 技术网站
 * [gitee-gvp](https://gitee.com/gvp/all)
