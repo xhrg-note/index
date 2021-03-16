@@ -1,3 +1,3 @@
 # 我的快速链接
 
-* [xx]()
+* [linux-tools](linux/linux_tools.md)
