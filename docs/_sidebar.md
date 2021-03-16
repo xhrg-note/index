@@ -1,5 +1,7 @@
 - 基础架构
   - [总体规划](article/techs.md)
+  - [注册中心]
+    - [zookeeper](base/register/zookeeper.md)
 
 - 性能优化
   - [理论](perf/perf.md)
