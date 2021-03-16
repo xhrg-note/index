@@ -1,14 +1,78 @@
-# 常用工具
-
-#### 根据 进程 id查看进程占用端口:
-
-> netstat -nap | grep 1095
-
-#### 根据 端 口查看对应进程
-
-> netstat -tunlp | grep 8080
+## 系统信息
 
 
+```
+cat /proc/meminfo  #查看内存信息
+cat /proc/version  #查看linux系统版本
+cat /proc/cpuinfo  #查看linux的cpu信息
+```
+
+## 内存
+
+```
+top 然后看%MEM
+free -h #查看内存
+cat /proc/meminfo #查看内存信息
+```
+
+## 文件磁盘
+
+```
+df -Th #查看文件目录大小
+df -h
+du
+```
+
+## 网络
+
+```
+cat /proc/pid/limits #查看pid这个进程的limit限制
+```
+
+## netstat
+```
+# 根据进程id查看进程占用端口:
+netstat -nap | grep 1095
+
+
+# 根据端口查看对应进程
+netstat -tunlp | grep 8080
+```
+
+## curl
+
+
+简单例子  curl -v http://localhost:80/hello
+
+curl常用参数
+
+* -v 显示通信过程
+* curl -X POST --data "data=xxx" example.com/form.cgi
+* curl -X POST--data-urlencode "date=April 1" example.com/form.cgi
+
+curl问题记录
+
+```
+xxxx@xxxx:/xxxx/xxxx# curl -v http://localhost:80/hello
+*   Trying ::1...
+* connect to ::1 port 80 failed: Connection refused
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 80 (#0)
+> GET /hello HTTP/1.1
+> Host: localhost
+> User-Agent: curl/7.47.0
+> Accept: */*
+< HTTP/1.1 200 OK
+< Server: xxxx
+< Date: Sun, 27 Sep 2020 08:01:44 GMT
+< Content-Type: text/plain; charset=utf-8
+< Content-Length: 70
+< 
+* Connection #0 to host localhost left intact
+{"message":"Hello , I am service"}
+//如上，根据HTTP/1.1 200 OK和message知道返回是正确的，
+//但是port 80 failed: Connection refused是为何
+```
 
 
 ## wrk
