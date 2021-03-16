@@ -15,4 +15,7 @@
   - [golang开源软件](soft/golang.md)
   - [产品开源软件](soft/product.md)
 
+- 笔记集合
+  - [golang语言](golang/golang.md)
+
 - [docsify使用安装](article/docsify.md)
