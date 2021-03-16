@@ -1,21 +1,31 @@
 * [主页]()
 
 
-* [基础架构]()
+
+* [一、基础架构](article/techs.md)
   * [中间件]()
+    * 配置中心
+    * 网关
+    * 消息队列
   * [基础设施]()
+    * CICD
+    * 服务话
 
-* [性能优化]()
-* [项目介绍](linux/netstat.md)
-* [设计文档]()
-  * [接口文档](linux/netstat.md)
-  * [数据库设计](linux/netstat.md)
-* [linux](linux/netstat.md)
+* [二、性能优化]()
+  * [linux常用命令](linux/linux_tools.md)
 
 
 
-* [计算机基础]()
+* [三、计算机基础]()
+  * 网络
+  * 存储
+  * 算法
 
 
-* [开源软件]()
+* [四、开源软件]()
+  * [java开源软件]()
+  * [golang开源软件]()
+  * [产品开源软件]()
+
+
 * [docsify使用安装](article/docsify.md)
