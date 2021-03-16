@@ -2,6 +2,9 @@
   - [总体规划](article/techs.md)
   - 注册中心
     - [zookeeper](base/register/zookeeper.md)
+  - 消息队列
+    - RocketMQ
+      - [rocketmq实战](/base/mq/rocketmq/rocketmq_action/rocketmq_action.md)
 
 - 性能优化
   - [理论](perf/perf.md)
