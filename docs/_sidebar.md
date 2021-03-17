@@ -28,9 +28,10 @@
   - [java开源软件](soft/java.md)
   - [golang开源软件](soft/golang.md)
   - [产品开源软件](soft/product.md)
-gateway
+
 - 笔记集合
   - [golang语言](golang/golang.md)
+  - [书籍推荐](article/book.md)
 
 
 - [docsify使用安装](article/docsify.md)
