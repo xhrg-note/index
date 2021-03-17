@@ -1,6 +1,5 @@
 ## 系统信息
 
-
 ```
 cat /proc/meminfo  #查看内存信息
 cat /proc/version  #查看linux系统版本
@@ -125,3 +124,5 @@ ab -n 100 -H “Cookie: Key1=Value1; Key2=Value2” http://test.com/ # -H 表示
 -w:以HTML表的格式输出结果 
 
 ```
+
+##end
