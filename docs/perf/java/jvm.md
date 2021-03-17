@@ -3,4 +3,7 @@
 
 ## GC收集器
 
-* zgc
+
+#### ZGC
+
+zgc适和proxy，不适合es大内存
