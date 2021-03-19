@@ -35,6 +35,6 @@
   - [书籍推荐](article/book.md)
 
 - 其他内容
-  - [文章归档](e.md)
+  - [文章归档](other/my.md)
   - [网络好文](other/blog.md)
   - [docsify使用安装](other/docsify.md)
