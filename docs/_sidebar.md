@@ -4,8 +4,8 @@
     - [zookeeper](base/register/zookeeper.md)
   - 消息队列
     - RocketMQ
-      - [rocketmq实战](base/mq/rocketmq/rocketmq_action/rocketmq_action.md)
-      - [rocketmq存储](base/mq/rocketmq/rocketmq_store.md)
+      - [RocketMQ实战](base/mq/rocketmq/rocketmq_action/rocketmq_action.md)
+      - [RocketMQ存储](base/mq/rocketmq/rocketmq_store.md)
   - 网关
     - [网关简介](base/gateway/main.md)
 
