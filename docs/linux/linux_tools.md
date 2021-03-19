@@ -125,4 +125,15 @@ ab -n 100 -H “Cookie: Key1=Value1; Key2=Value2” http://test.com/ # -H 表示
 
 ```
 
+
+## tar
+
+```
+压缩
+tar -zcvf test.tar.gz nohup.no 
+
+解压
+tar -zxvf test.tar.gz
+```
+
 ##end

@@ -5,6 +5,7 @@
   - 消息队列
     - RocketMQ
       - [rocketmq实战](/base/mq/rocketmq/rocketmq_action/rocketmq_action.md)
+      - [rocketmq存储](/base/mq/rocketmq/rocketmq_store.md)
   - 网关
     - [网关简介](base/gateway/main.md)
 
@@ -33,5 +34,7 @@
   - [golang语言](golang/golang.md)
   - [书籍推荐](article/book.md)
 
-
-- [docsify使用安装](article/docsify.md)
+- 其他内容
+  - [文章归档](e.md)
+  - [网络好文](other/blog.md)
+  - [docsify使用安装](other/docsify.md)
