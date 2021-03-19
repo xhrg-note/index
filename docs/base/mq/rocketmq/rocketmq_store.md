@@ -1,7 +1,8 @@
-## rocketmq文件存储
+# rocketmq文件存储
 
 
-#### 一、文件存储
+## 一、文件存储
+
 
 本章节不会讲述任何与rocketmq代码有关系的东西，也不会讲高性能文件读写相关原理。纯粹讲rocketmq生成的文件有哪些，存储哪些东西，预备知识如下：
 
@@ -17,4 +18,14 @@
 先搭建rocketmq单机，然后发送消息后，默认生产的文件路径是 {user.home}/store下，测试会生产文件内容如下
 
 
-<img src="base/mq/rocketmq/pic/rocketmq_file.jpg" width="300"/>
+<img src="base/mq/rocketmq/pic/rocketmq_file.jpg" width="400"/>
+
+如上图所示：
+
+#### commitlog
+
+这个是真实存消息的数据，比如说你发送了一个消息过去，你的消息内容是一些使用数据，那么这个数据就存在这里的。
+
+* config
+* consumequeue
+* index
