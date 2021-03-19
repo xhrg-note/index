@@ -16,4 +16,4 @@
 
 
 先搭建rocketmq单机，然后发送消息后，默认生产的文件路径是~/store下，测试会生产文件内容如下111
-<img src="/pic/rocketmq_file.jpg" width="100">
+<img src="base/mq/rocketmq/pic/rocketmq_file.jpg" width="101">
