@@ -23,7 +23,8 @@
 - 基础知识
   - [网络](e.md)
   - [存储](e.md)
-  - [算法](e.md)
+  - 算法类
+    - [客户端设计](basic/client.md)
 
 - 开源软件
   - [java开源软件](soft/java.md)
