@@ -1,20 +1,17 @@
 ## 重点框架
 *  [spring系列](https://www.jianshu.com/p/3f092c6f0d90)
-*  log4j2
-*  缓存：
-*  ,hikaricp,okhttp,shiro,ehcache,,bucket4j-hazelcast,resilience4j-circuitbreaker,hystrix,springfox(swgger)
+*  hikaricp,okhttp,shiro,ehcache,,bucket4j-hazelcast,resilience4j-circuitbreaker,hystrix,springfox(swgger)
 *  [joor-java](https://github.com/jOOQ/jOOR)
 
+## 服务治理
+* Resilience4j 熔断限流
+* Hystrix
+* Sentinel
 
 ## 网关
 * zuul2.x
 * spring-cloud-gateway
 * verx
-
-
-## 未分类
-
-
 
 ## 网络
 * okhttp
@@ -37,4 +34,6 @@
 
 ## 算法
 * raft -> https://github.com/apache/ratis
-* Resilience4j 熔断限流
+
+## 未分类
+
