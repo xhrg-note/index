@@ -33,6 +33,7 @@
   - [java开源软件](soft/java.md)
   - [golang开源软件](soft/golang.md)
   - [产品开源软件](soft/product.md)
+  - [前端方案](soft/ui.md)
 
 - 笔记集合
   - [golang语言](golang/golang.md)
