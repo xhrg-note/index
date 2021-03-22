@@ -8,6 +8,9 @@
       - [RocketMQ存储](base/mq/rocketmq/rocketmq_store.md)
   - 网关
     - [网关简介](base/gateway/main.md)
+  - 缓存
+    - redis
+      - [redis](base/cache/redis/redis.md)
 
 - 性能优化
   - [理论](perf/perf.md)
