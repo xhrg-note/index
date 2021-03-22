@@ -54,4 +54,17 @@ rocketmq有生产者会生产消息，然后他把这些消息，按照逻辑分
 
 #### index
 
-这个是用来搜索消息的，你现在在控制台想查询以前发过的消息，怎么快速查找，就是依靠index文件夹
+作用：这个是用来搜索消息的，你现在在控制台想查询以前发过的消息，怎么快速查找，就是依靠index文件夹。
+文件名：这个文件的名称是通过  nSimpleDateFormat("yyyyMMddHHmmssE") 生成的字符串，如上图所示。
+文件有多个：indexfile文件一般在index目录下也会有多个。
+文件内容：每个indexfile文件有3部分组成，第一个是IndexHead，IndexHead包括以下几个，这几个依次放在每一个文件的开始位置，比如说我有一个文件，举例子是100个字节，那么我用第一个字节表示我的文件包括了多少个信息，这个数字可能是6.表示6个。而rocketmq的index文件他的前面占用了这么几个有内容的属性。
+* endTimestamp：该索引文件包含消息的最大存储时间
+* beginPhyoffset：该索引文件中包含消息的最小物理偏移量（commitlog 文件偏移量）
+* endPhyoffset：该索引文件中包含消息的最大物理偏移量（commitlog 文件偏移量）
+* hashSlotCount：hashslot个数，并不是 hash 槽使用的个数，在这里意义不大，
+* indexCount：已使用的 Index 条目个数
+indexfile的文件头，也就是indexHead就是前面N个字节。接下来的内容分位2块，前面有500w个hash槽，每个槽的字节一样大，所以区分出500w个。再后面是2000w个index条目。下面分别解释。他们的大小都是固定的。
+* 槽位，rocketmq存消息的时候，代码中会让你发一个属性key过来，假设这个key是"test",那么根据test这个字符串生成hashcode，然后除以500w，就到了某个位置上，然后把这个消息的index条目创建好，写到index条目中，再把这个条目的位置，写在这个槽位上。假设2个key碰撞了，那么在index后面继续追加，因为index条目的每一个index，都有一个属性是记录自己下一个条目的位置的。所以500w个槽位并不是index的个数，因为会碰撞，假设有4个key都碰撞了，那么这4个key会占用1个槽位，但是index条目确会占用4个。
+* index条目，2000w个条目说明，每一个index文件，可以存储2000w个索引。
+
+
