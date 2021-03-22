@@ -29,7 +29,7 @@
   - [算法](e.md)
   - 通用
     - [客户端设计](basic/client.md)
-    - [高可用](basic/ha.md)
+    - [高可用设计](basic/ha.md)
     - [中间件技术考虑点](basic/overall.md)
 
 - 开源软件
