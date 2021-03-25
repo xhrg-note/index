@@ -41,6 +41,7 @@
 - 笔记集合
   - [golang语言](golang/golang.md)
   - [书籍推荐](article/book.md)
+  - [java语言](article/java_md.md)
 
 - 其他内容
   - [文章归档](other/my.md)
