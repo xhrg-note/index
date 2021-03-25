@@ -9,3 +9,9 @@
 
 ## 日志
 * logrus
+
+
+
+## 算法
+* 限流 https://github.com/teambition/ratelimiter-go
+* 限流 https://github.com/uber-go/ratelimit
