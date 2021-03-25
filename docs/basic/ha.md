@@ -9,11 +9,10 @@
 #### 集群方式
 
 从简单到复杂：
-1. 不通讯的集群模式。quartz
-2. 所有节点全量数据。consul
-3. 节点的主从模式。rocketmq，mysql，redis-cluster
-4. 数据块的主从模式。hazelcast，kafka
-5. 一致性算法模式。zookeeper，etcd
+1. 不通讯的集群模式。 quartz, nginx, gateway
+2. 节点的主从模式。   rocketmq, mysql, redis-cluster
+3. 数据块的主从模式。 hazelcast，kafka
+4. 一致性算法模式。   zookeeper，etcd, consul
 
 #### hazelcast
 
