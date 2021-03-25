@@ -11,7 +11,7 @@
 
 1. 单点主从模式。mysql
 2. 一致性算法模式。zookeeper，etcd
-3. 数据块的主从模式。redis-cluster，rocketmq，hazelcast
+3. 数据块的主从模式。redis-cluster，rocketmq，hazelcast，kafka
 4. 广播数据模式。consul
 5. 不通讯的集群模式。quartz
 
