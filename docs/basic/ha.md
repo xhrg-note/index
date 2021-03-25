@@ -6,12 +6,12 @@
 一般情况下，我们最简单的一个服务，比如redis启动，一个单节点就行了。但是这样会有一个问题，那就是假如这个节点挂了，系统将不会提供服务，这种情况是无法容忍的，于是乎，我们在设计基础组件的时候，需要考虑高可用设计。那么高可用设计有哪些点或者角度呢。
 
 
-#### 集群
+#### 集群方式
 
-1. 节点的主从模式。rocketmq，mysql
+1. 节点的主从模式。rocketmq，mysql，redis-cluster
 2. 不通讯的集群模式。quartz
 3. 一致性算法模式。zookeeper，etcd
-4. 数据块的主从模式。redis-cluster，hazelcast，kafka
+4. 数据块的主从模式。hazelcast，kafka
 5. 所有节点全量数据。consul
 
 
