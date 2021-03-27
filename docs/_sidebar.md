@@ -32,6 +32,7 @@
   - [存储](e.md)
   - 算法
     - [时间轮算法](basic/sf/time_wheel.md)
+    - [zab和raft](basic/sf/zab_raft.md)
   - 通用
     - [客户端设计](basic/client.md)
     - [高可用设计](basic/ha.md)
