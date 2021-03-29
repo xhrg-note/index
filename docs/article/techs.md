@@ -28,14 +28,14 @@
 * 测试管理：功能测试，压力测试，
 
 # 基础中间件
-* [应用信息]。包括应用的名称，owner，部门，sdk版本等元信息，需要管理。不然后期推广新框架，做公司治理都会麻烦。
-* [消息队列](https://www.jianshu.com/p/9724dc52c44a)。[$\color{red}{rocketmq}$](https://www.jianshu.com/p/aedc88f1d2b8)，activemq(新一代叫activemq-artemis)，kafka，apache-pulsar，rabbitmq，https://nats.io/，https://nsq.io/，[qmq](https://github.com/qunarcorp/qmq)，zeromq
-* 配置中心。[$\color{red}{ctripcorp.apollo}$](https://www.jianshu.com/p/b39e17a2a77f)，[nacos](https://nacos.io)，kms(秘钥管理)，[brcc](https://github.com/baidu/brcc)
+* 应用信息。包括应用的名称，owner，部门，sdk版本等元信息，需要管理。不然后期推广新框架，做公司治理都会麻烦。
+* [消息队列](https://www.jianshu.com/p/9724dc52c44a)。[rocketmq](https://www.jianshu.com/p/aedc88f1d2b8)，activemq(新一代叫activemq-artemis)，kafka，apache-pulsar，rabbitmq，https://nats.io/，https://nsq.io/，[qmq](https://github.com/qunarcorp/qmq)，zeromq
+* 配置中心。[ctripcorp.apollo](https://www.jianshu.com/p/b39e17a2a77f)，[nacos](https://nacos.io)，kms(秘钥管理)，[brcc](https://github.com/baidu/brcc)
 * [调度平台](https://www.jianshu.com/p/50dd27a87d2b)。[powerjob](https://github.com/KFCFans/PowerJob)， xxl-job，elastic-job，vip-saturn
 * 数据订阅。alibaba-canal，linkedin-databus, debezium + kafka-connect
 * [网关](https://www.jianshu.com/p/c1c660d7353e)。spring-gateway，zuul，kong，apisix，manba(golang)，悟空(golang)
 * 分布式事务。seata，消息事务，
-* [微服务](https://www.jianshu.com/p/8eb69c6d3c9e)(5%)。[dubbo](https://www.jianshu.com/p/76264499c116)，grpc，sofa-rpc，octo-rpc(系列)，[sentinel](https://sentinelguard.io/zh-cn/docs/quick-start.html)(2020版支持golang)，spring-cloud全家桶，服务治理[流控[sentinel,hystrix]]
+* [微服务](https://www.jianshu.com/p/8eb69c6d3c9e)。[dubbo](https://www.jianshu.com/p/76264499c116)，grpc，sofa-rpc，octo-rpc(系列)，[sentinel](https://sentinelguard.io/zh-cn/docs/quick-start.html)(2020版支持golang)，spring-cloud全家桶，服务治理[流控[sentinel,hystrix]]
 * 注册中心。zookeeper，etcd，eureka
 * 服务网格。sofa-mosn，[微软-OSM](https://github.com/openservicemesh/osm)
 
