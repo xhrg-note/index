@@ -1,6 +1,7 @@
 - 基础架构
   - [总体规划](article/techs.md)
   - 注册中心
+    - [注册中心](base/register/exp.md)
     - [zookeeper](base/register/zookeeper.md)
   - 消息队列
     - RocketMQ
@@ -11,6 +12,9 @@
   - 缓存
     - redis
       - [redis](base/cache/redis/redis.md)
+  - 数据库
+    - mysql
+      - [mysql](base/db/mysql/mysql.md)
 
 - 性能优化
   - [理论](perf/perf.md)
@@ -26,7 +30,9 @@
 - 基础知识
   - [网络](e.md)
   - [存储](e.md)
-  - [算法](e.md)
+  - 算法
+    - [时间轮算法](basic/sf/time_wheel.md)
+    - [zab和raft](basic/sf/zab_raft.md)
   - 通用
     - [客户端设计](basic/client.md)
     - [高可用设计](basic/ha.md)
