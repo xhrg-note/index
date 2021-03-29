@@ -1,5 +1,5 @@
 - 基础架构
-  - [总体规划](article/techs.md)
+  - [**总体规划**](article/techs.md)
   - 注册中心
     - [注册中心](base/register/exp.md)
     - [zookeeper](base/register/zookeeper.md)
