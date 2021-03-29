@@ -1,13 +1,18 @@
-企业架构有2个问题比较核心的问题，还是人的问题。
-一：用户。用户需要的是可扩展(功能升级)，稳定性(可用，稳定)，漂亮易用。
-二：员工。员工面对的问题更多，更复杂。1 简单上手，2 高可用，稳定，监控告警等，3 深入关注业务，产品功能绩效，而非技术使用，而非公司流程，而非技术发展，而非人力成本和机器成本，而非多项目切换，而非接手其他项目。员工还关注技术分析和技术沉淀，所以内部分享也很重要，分享包括，技术入门，业务痛点，解决问题，架构设计等等。
-
-
 *本文会不断更新，包括增加一些好的中间件，包括对分类更合理的划分。*
+
+# 基础架构的作用
+
+企业架构有2个问题比较核心的问题，还是人的问题：：：
+
+* 最终用户。用户需要的是可扩展(功能升级)，稳定性(可用，稳定)，漂亮易用。
+* 开发人员。员工面对的问题更多，更复杂。
+  1. 简单上手。更简单的使用各种技术，而无需投入太多学习成本。
+  2. 项目稳定，高可用，可扩展，可观测。包括微服务，分布式，监控告警等等，
+  3. 深入关注业务功能，业务发展，产品功能，个人绩效。
+  4. 员工还关注技术分享和技术沉淀，所以内部分享也很重要，包括技术入门，业务痛点，解决问题，架构设计等等。
 
 本文概括基础架构的所有组件，以此扩展，深挖，希望读者评论本文。可以有分类的建议，中间件的推荐，框架的推荐等。更注重实战，但是好的实战离不开对原理的了解。
 
-[基础软件文章模板](https://www.jianshu.com/p/e548aaf91613)
 
 [基础软件技术考虑点]
 
@@ -34,6 +39,17 @@
 * 注册中心。zookeeper，etcd，eureka
 * 服务网格。sofa-mosn，[微软-OSM](https://github.com/openservicemesh/osm)
 
+# 通用业务
+* 【用户中心】SSO登录。
+* 【开放平台】外部调用内部的开放平台，内部调用外部的outing项目。
+* 【公共服务】动态日志。消息推送平台：短信，邮件，微信，钉钉，飞书。
+
+# 基础设施
+* 【监控】Logging。elk，loki，https://github.com/grafana/loki
+* 【监控】Tracing。pinpoint，skywalking，eagleeyes，appdynamic，oneapm，pinpoint，dianping-cat，[didi-nightingale](https://n9e.didiyun.com)，zipkin，jaeger
+* 【监控】Metrics。时序相关的，[prometheus](https://www.jianshu.com/p/fdbb17278da4) + Grafana，datadog，Open-Falcon
+* 【监控】其他。zabbix
+
 # 数据中间件
 * 分布式缓存。[redis](https://www.jianshu.com/p/b6f6c100da54)[cluster，sentinel，codis]，hazelcast
 * 分布式数据库。[tidb](https://pingcap.com/)
@@ -48,17 +64,6 @@
 * 实时计算。clickhouse(单表)
 * 离线计算。
 * 数据采集和数据传输。[datax](https://github.com/alibaba/DataX) + [datax-web](https://github.com/WeiYe-Jing/datax-web)
-
-# 基础设施
-* 【监控】Logging。elk，loki，https://github.com/grafana/loki
-* 【监控】Tracing。pinpoint，skywalking，eagleeyes，appdynamic，oneapm，pinpoint，dianping-cat，[didi-nightingale](https://n9e.didiyun.com)，zipkin，jaeger
-* 【监控】Metrics。时序相关的，[prometheus](https://www.jianshu.com/p/fdbb17278da4) + Grafana，datadog，Open-Falcon
-* 【监控】其他。zabbix
-
-# 业务组件
-* 【用户中心】SSO登录。
-* 【开放平台】外部调用内部的开放平台，内部调用外部的outing项目。
-* 【公共服务】动态日志。消息推送平台：短信，邮件，微信，钉钉，飞书。
 
 # 运维管理
 * 发布平台|tars|jenkins|KubeOperator|Rundeck|opendevops|walle-web.io|Travis
@@ -75,10 +80,6 @@
 * 业务开发流程化标准平台。需求->创建项目->资源申请->上线->监控->下线
 * 企业开发平台(包括用户，权限，代码生成，服务治理，各种开发用到的工具继承进去)
 
-# 优秀框架
-
-[优秀框架中间件](https://www.jianshu.com/p/1403560366d6)
-
 # 框架组件
 
 对于业务开发的同学，不可避免的用一些性能不高的类，比如说喜欢用StringBuffer，而非StringBuilder，所以基础框架需要不断深入研究底层数据结构，让业务开发使用公司公共组件类，而非jdk或者开源组件。没必要花时间去研究下所有的类的数据结构高效性。由基础框架统一规划，文档输出。
@@ -90,13 +91,13 @@
 *  apache-common -> 对象池
 *  [jushata](https://github.com/didi/JuShaTa)
 
-# 大数据
-* https://gitee.com/jman325_admin/pagenow_open
-
 # 测试
 * 自动化测试。robotframework
 * 压力测试平台。apache-jmeter，https://github.com/smallnest/go-web-framework-benchmark，wrk
 * 破坏测试平台。ali-chaosblade
+
+# 大数据
+* https://gitee.com/jman325_admin/pagenow_open
 
 # 问题和性能分析工具
 * arthas
@@ -130,12 +131,3 @@
 * confluence
 * 代码管理：阿里云code，gitee，gitlab，gogs
 * [中间件产品化之代码文档资源管理](https://www.jianshu.com/p/95ae35484f6e)
-
-# 中间件通用技术
-* 网络(netty)
-* 存储(mysql,文件)
-* 算法(一致性哈希，raft等)
-
-# 附录
-[基础架构之书籍推荐](https://www.jianshu.com/p/b5c64c42a653)
-[速查系列](https://www.jianshu.com/nb/36772230)【5%完成度】
