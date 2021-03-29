@@ -28,8 +28,9 @@
 * 测试管理：功能测试，压力测试，
 
 # 基础中间件
+
 * 应用信息。包括应用的名称，owner，部门，sdk版本等元信息，需要管理。不然后期推广新框架，做公司治理都会麻烦。
-* [消息队列](https://www.jianshu.com/p/9724dc52c44a)。[rocketmq](https://www.jianshu.com/p/aedc88f1d2b8)，activemq(新一代叫activemq-artemis)，kafka，apache-pulsar，rabbitmq，https://nats.io/，https://nsq.io/，[qmq](https://github.com/qunarcorp/qmq)，zeromq
+* [消息队列](https://www.jianshu.com/p/9724dc52c44a)。[rocketmq](https://www.jianshu.com/p/aedc88f1d2b8)，activemq(新一代叫activemq-artemis)，kafka，apache-pulsar，rabbitmq，nats，nsq，[qmq](https://github.com/qunarcorp/qmq)，zeromq
 * 配置中心。[ctripcorp.apollo](https://www.jianshu.com/p/b39e17a2a77f)，[nacos](https://nacos.io)，kms(秘钥管理)，[brcc](https://github.com/baidu/brcc)
 * [调度平台](https://www.jianshu.com/p/50dd27a87d2b)。[powerjob](https://github.com/KFCFans/PowerJob)， xxl-job，elastic-job，vip-saturn
 * 数据订阅。alibaba-canal，linkedin-databus, debezium + kafka-connect
@@ -71,12 +72,11 @@
 * [宜信-kplcloud](https://github.com/kplcloud/kplcloud)
 * k8s
 * 18款工具，https://mp.weixin.qq.com/s/CAroslMhKt21y6_XYYXqQg
+* 服务申请平台。服务器，mysql，zk等资源申请平台。
 
 # 开发效率
 * 代码生成器。[code-gen](https://gitee.com/durcframework/code-gen)
-* 基础框架
-* 工具类
-* 服务器，mysql，zk等资源申请平台。
+* 基础框架,工具类
 * 业务开发流程化标准平台。需求->创建项目->资源申请->上线->监控->下线
 * 企业开发平台(包括用户，权限，代码生成，服务治理，各种开发用到的工具继承进去)
 
