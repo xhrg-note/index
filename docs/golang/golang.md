@@ -24,4 +24,7 @@ go install github.com/fullstorydev/grpcurl/cmd/grpcurl
 
 查看服务列表
 grpcurl -plaintext localhost:1535 list
+
+查看接口的详细描述
+grpcurl -plaintext localhost:1535 describe serviceName
 ```

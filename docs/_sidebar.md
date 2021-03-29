@@ -3,6 +3,7 @@
   - 注册中心
     - [注册中心](base/register/exp.md)
     - [zookeeper](base/register/zookeeper.md)
+    - [etcd](base/register/etcd/etcd.md)
   - 消息队列
     - RocketMQ
       - [RocketMQ实战](base/mq/rocketmq/rocketmq_action/rocketmq_action.md)
