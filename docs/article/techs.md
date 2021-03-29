@@ -56,7 +56,7 @@
 * 分布式数据库。[tidb](https://pingcap.com/)
 * 数据库中间件(框架)。shardingsphere，dble，[kingshard(go)](https://github.com/flike/kingshard/blob/master/README_ZH.md)
 * 分布式文件系统。fastdfs，seaweedfs，bookkeeper
-* 数据库。[$\color{red}{mysql}$] ，注意，很多业务开发的同学，基本上都在和mysql打交道，所以mysql相关的技术是非常重要的。
+* 数据库。mysql, 注意, 很多业务开发的同学，基本上都在和mysql打交道，所以mysql相关的技术是非常重要的。
 
 # 数据中台
 * BI系统。Davinci
