@@ -11,7 +11,6 @@
 等等，如果要增加新的接口，就需要运维去配置，可是管理一个域名的运维要经常改nginx风险很大，而且效率非常低下。这个时候，如果有一个网关可以帮助业务自行配置接口就非常好增加c端的接口。
 
 
-
 ## 网关流量多重模式
 
 * nginx -> gateway -> http-service。如果用这种模式，一般是http请求到nginx，nginx到网关, 网关到后台http服务，然后把熔断限流等公共需求放在gateway中，这种模式有一个好处是可以把请求透传到后台。缺点是，对于业务来说，收益不是很高，因为从nginx->http-service之间，有没有gateway对业务来说并没有太大好处。
@@ -24,7 +23,7 @@
 
 
 ## 市面上的网关
-* [manba-golang](https://github.com/fagongzi/manba)
+* [manba-golang](https://github.com/fagongzi/manba) 基于golang的国产网关，比较不错。
 * [kong-openresty](https://github.com/Kong/kong)
-* [soul-java](https://github.com/dromara/soul)
+* [soul-java](https://github.com/dromara/soul) 社区作者比较活跃，可以关注后期发展
 * [apisix-openresty](https://github.com/apache/apisix)
