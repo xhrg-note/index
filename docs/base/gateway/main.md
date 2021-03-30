@@ -27,3 +27,7 @@
 * [kong-openresty](https://github.com/Kong/kong)
 * [soul-java](https://github.com/dromara/soul) 社区作者比较活跃，可以关注后期发展
 * [apisix-openresty](https://github.com/apache/apisix)
+
+
+## 网关美文
+* [Service Mesh和API Gateway关系深度探讨](https://www.servicemesher.com/blog/service-mesh-and-api-gateway/)
