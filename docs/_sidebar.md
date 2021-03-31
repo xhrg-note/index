@@ -41,6 +41,7 @@
     - [时间轮算法](basic/sf/time_wheel.md)
     - [zab和raft](basic/sf/zab_raft.md)
   - 通用
+    - [基础组件设计](basic/mid.md)
     - [客户端设计](basic/client.md)
     - [高可用设计](basic/ha.md)
     - [中间件技术考虑点](basic/overall.md)
