@@ -40,6 +40,7 @@ netstat -tunlp | grep 8080
 
 ## curl
 
+* 注意curl -v 的确可以显示详情，但是有一些很少的情况下，他会把显示的内容和http的返回数据混合。
 
 简单例子  curl -v http://localhost:80/hello
 
