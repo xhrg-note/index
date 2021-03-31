@@ -15,7 +15,6 @@
 
 本文概括基础架构的所有组件,以此扩展,深挖,希望读者评论本文。可以有分类的建议,中间件的推荐,框架的推荐等。更注重实战,但是好的实战离不开对原理的了解。
 
-
 [基础软件技术考虑点]
 
 # 技术门户(技术入口)
@@ -101,7 +100,7 @@
 # 大数据
 * https://gitee.com/jman325_admin/pagenow_open
 
-# 问题和性能分析工具
+# 工具中心
 * arthas
 * jdk中bin目录 
 * [linux性能优化](https://www.jianshu.com/p/de15f520d030)
@@ -114,22 +113,8 @@
 * 日志规范
 * 接口文档。swagger[[knife4j](https://gitee.com/xiaoym/knife4j)] 
 
-# 前端UI技术
+# 统一UI
 一个好的中间件产品,怎么能少不了一套好的ui呢。
 * layUI
 * icework
 * ant.design
-
-# 开源组织
-* 宜信开源：http://college.creditease.cn/
-* SOFA团队：https://www.sofastack.tech/projects/
-* 美团点评：https://github.com/Meituan-Dianping
-* 携程：https://github.com/ctripcorp
-* xxl系列：https://www.xuxueli.com/page/projects.html
-
-# 项目管理
-* wizard
-* 禅道
-* confluence
-* 代码管理：阿里云code,gitee,gitlab,gogs
-* [中间件产品化之代码文档资源管理](https://www.jianshu.com/p/95ae35484f6e)
