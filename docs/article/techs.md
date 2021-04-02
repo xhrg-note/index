@@ -66,6 +66,7 @@
 * 实时计算。clickhouse(单表)
 * 离线计算。
 * 数据采集和数据传输。[datax](https://github.com/alibaba/DataX) + [datax-web](https://github.com/WeiYe-Jing/datax-web)
+* https://gitee.com/jman325_admin/pagenow_open
 
 # 运维管理
 * 发布平台|tars|jenkins|KubeOperator|Rundeck|opendevops|walle-web.io|Travis
@@ -75,36 +76,26 @@
 * 18款工具,https://mp.weixin.qq.com/s/CAroslMhKt21y6_XYYXqQg
 * 服务申请平台。服务器,mysql,zk等资源申请平台。
 
-# 开发效率
+# 开发框架
+
+对于业务开发的同学,不可避免的用一些性能不高的类,比如说喜欢用StringBuffer,而非StringBuilder,所以基础框架需要不断深入研究底层数据结构,让业务开发使用公司公共组件类,而非jdk或者开源组件。没必要花时间去研究下所有的类的数据结构高效性。由基础框架统一规划,文档输出。
+
 * 代码生成器。[code-gen](https://gitee.com/durcframework/code-gen)
 * 基础框架,工具类
 * 业务开发流程化标准平台。需求->创建项目->资源申请->上线->监控->下线
 * 企业开发平台(包括用户,权限,代码生成,服务治理,各种开发用到的工具继承进去)
-
-# 框架组件
-
-对于业务开发的同学,不可避免的用一些性能不高的类,比如说喜欢用StringBuffer,而非StringBuilder,所以基础框架需要不断深入研究底层数据结构,让业务开发使用公司公共组件类,而非jdk或者开源组件。没必要花时间去研究下所有的类的数据结构高效性。由基础框架统一规划,文档输出。
-
 * 常用类数据结构的封装。对于业务开发的同学,有时候不可避免用一些性能不好
 * 短信|邮件|钉钉等第三方调用。
 * 分布式锁。
-*  guava->本地缓存,本地限流
-*  apache-common -> 对象池
-*  [jushata](https://github.com/didi/JuShaTa)
+* guava->本地缓存,本地限流
+* apache-common -> 对象池
+* [jushata](https://github.com/didi/JuShaTa)
 
 # 测试相关
 * 自动化测试。robotframework
 * 压力测试平台。apache-jmeter,https://github.com/smallnest/go-web-framework-benchmark,wrk
 * 破坏测试平台。ali-chaosblade
 
-# 大数据
-* https://gitee.com/jman325_admin/pagenow_open
-
-# 工具中心
-* arthas
-* jdk中bin目录 
-* [linux性能优化](https://www.jianshu.com/p/de15f520d030)
-* [java性能优化](https://www.jianshu.com/p/5f57d4190c2f),包括gc算法,gc收集器,内存,等等所有java相关。
 
 # 统一规范
 * [日志,分之,编码,等的规范](https://www.jianshu.com/p/168c10fd7747)
