@@ -1,5 +1,6 @@
 ## CICD
 * https://github.com/mgr9525/gokins/wiki
+* https://pangu.javamall.com.cn/
 
 ## 文档
 * 飞书
