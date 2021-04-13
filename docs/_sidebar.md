@@ -25,7 +25,9 @@
   - [git分支管理](design/git.md)
 - 性能优化
   - [理论](perf/perf.md)
-  - [linux](linux/linux_tools.md)
+  - linux
+    - [linux命令](linux/linux_tools.md)
+    - [top](perf/linux/top.md)
   - [docker](docker/docker.md)
   - java
     - [jvm](perf/java/jvm.md)
