@@ -1,3 +1,9 @@
+goland配置
+
+* GOROOT，这个指的是golang的sdk的安装目录
+* GOPATH，这个可以不用设置，因为现在已经不用了。但是默认应该会有一个userHome的go目录
+* Go Modules，勾选enable，然后再环境变量设置增加GO111MODULE=auto
+
 
 golang编译
 
