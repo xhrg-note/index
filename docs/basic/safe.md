@@ -21,6 +21,8 @@
 
 #### 1.3、SHA256withRSA签名算法
 
+* RSA是非对称加密
+
 公钥和私钥
 
 ## 二、加解密
@@ -29,6 +31,8 @@
 * 密文 + 盐 + 算法 = 业务数据
 
 #### AES加解密
+
+* AES对称加密
 
 ```
 golang例子：https://www.jianshu.com/p/9c1c8958b279
@@ -97,4 +101,214 @@ func main() {
 ```
 
 
+### java语言利用RSA加解密和验签
+
+
+
+代码如下：
+```
+
+package org.example;
+
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.digest.DigestUtils;
+
+import javax.crypto.Cipher;
+import java.nio.charset.StandardCharsets;
+import java.security.*;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class SignatureUtil {
+
+    public static final String PUBLIC_KEY_NAME = "publicKey";
+
+    public static final String PRIVATE_KEY_NAME = "privateKey";
+
+    private static final String SIGNATURE_ALGORITHM_SHA256WITHRSA = "SHA256withRSA";
+
+    private static final String KEY_ALGORITHM_RSA = "RSA";
+
+    //可选1024 或者2048
+    private static final int KEY_SIZE = 1024;
+
+    private static Signature getInstance(String algorithm) {
+        try {
+            return Signature.getInstance(algorithm);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Sign with SHA256withRSA algorithm
+     *
+     * @param privateKey
+     * @param plainText
+     * @return
+     */
+    public static byte[] signSHA256withRSA(String privateKey, String plainText) {
+        Signature signature = getInstance(SIGNATURE_ALGORITHM_SHA256WITHRSA);
+        PrivateKey key = transformPrivateKey(privateKey);
+        byte[] digestData = DigestUtils.sha256(plainText);
+        try {
+            signature.initSign(key);
+            signature.update(digestData);
+            return signature.sign();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Verify sign with SHA256withRSA algorithm
+     *
+     * @param publicKey
+     * @param plainText
+     * @param signData
+     * @return
+     */
+    public static boolean verifySignSHA256withRSA(String publicKey, String plainText, byte[] signData) {
+        Signature signature = getInstance(SIGNATURE_ALGORITHM_SHA256WITHRSA);
+        PublicKey key = transformPublicKey(publicKey);
+        byte[] digestData = DigestUtils.sha256(plainText);
+        try {
+            signature.initVerify(key);
+            signature.update(digestData);
+            return signature.verify(signData);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Transform String private key to PrivateKey with Map cache
+     *
+     * @param privateKey
+     * @return
+     */
+    public static PrivateKey transformPrivateKey(String privateKey) {
+        PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(Base64.decodeBase64(privateKey));
+        try {
+            KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM_RSA);
+            return keyFactory.generatePrivate(pkcs8EncodedKeySpec);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    /**
+     * Transform String public key to PublicKey with Map cache
+     *
+     * @param publicKey
+     * @return
+     */
+    public static PublicKey transformPublicKey(String publicKey) {
+        X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(Base64.decodeBase64(publicKey));
+        try {
+            KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM_RSA);
+            return keyFactory.generatePublic(x509KeySpec);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Generate key pair
+     *
+     * @return Map
+     * get(SignatureUtil.PUBLIC_KEY_NAME) get base64 public key
+     * get(SignatureUtil.PRIVATE_KEY_NAME) get base64 private key
+     */
+    public static Map<String, String> generateKeyPairBase64() {
+        KeyPairGenerator keyPairGenerator;
+        try {
+            keyPairGenerator = KeyPairGenerator.getInstance(KEY_ALGORITHM_RSA);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        keyPairGenerator.initialize(KEY_SIZE);
+        KeyPair keyPair = keyPairGenerator.generateKeyPair();
+        PublicKey publicKey = keyPair.getPublic();
+        PrivateKey privateKey = keyPair.getPrivate();
+        Map<String, String> keyMap = new HashMap<>();
+        keyMap.put(PUBLIC_KEY_NAME, Base64.encodeBase64String(publicKey.getEncoded()));
+        keyMap.put(PRIVATE_KEY_NAME, Base64.encodeBase64String(privateKey.getEncoded()));
+        return keyMap;
+    }
+
+    //公钥加密
+    public static String encrypt(String plainText, String publicKeyStr) {
+        try {
+            Cipher cipher = Cipher.getInstance(KEY_ALGORITHM_RSA);
+            PublicKey publickKey = transformPublicKey(publicKeyStr);
+            if (publickKey != null) {
+                cipher.init(Cipher.ENCRYPT_MODE, publickKey);
+                byte[] bytes = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
+                return Base64.encodeBase64String(bytes);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //私钥解密
+    public static String decrypt(String encryptText, String privateKeyStr) {
+        try {
+            //根据需要选择分组模式、填充。比如：RSA/ECB/NoPadding
+            Cipher cipher = Cipher.getInstance(KEY_ALGORITHM_RSA);
+            PrivateKey privateKey = transformPrivateKey(privateKeyStr);
+            if (privateKey != null) {
+                cipher.init(Cipher.DECRYPT_MODE, privateKey);
+                byte[] bytes = cipher.doFinal(Base64.decodeBase64(encryptText));
+                return new String(bytes, StandardCharsets.UTF_8);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+}
+
+```
+
+测试代码如下：
+
+```
+package org.example;
+
+import java.util.Map;
+
+public class SignatureUtilTest {
+
+    public static void main(String[] args) {
+        String text = "这个最原始的数据";
+        Map<String, String> map = SignatureUtil.generateKeyPairBase64();
+        String privateKey = map.get("privateKey");
+        String publicKey = map.get("publicKey");
+        System.out.println("生成了私钥是:");
+        System.out.println(privateKey);
+        System.out.println("生成了公钥是:");
+        System.out.println(publicKey);
+        System.out.println("开始进行私钥签名，和，公钥验证签名");
+        byte[] signKey = SignatureUtil.signSHA256withRSA(privateKey, text);
+        boolean ok = SignatureUtil.verifySignSHA256withRSA(publicKey, text, signKey);
+        System.out.println("验证结果是：");
+        System.out.println(ok);
+        System.out.println("---------验签逻辑结束，开始加解密----------");
+        String ciphertext = SignatureUtil.encrypt(text, publicKey);
+        System.out.println("加密后的密文是：");
+        System.out.println(ciphertext);
+        String newText = SignatureUtil.decrypt(ciphertext, privateKey);
+        System.out.println("解后的密文是：");
+        System.out.println(newText);
+    }
+}
+
+```
 
