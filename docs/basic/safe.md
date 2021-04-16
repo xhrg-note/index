@@ -1,6 +1,9 @@
 ## 简单安全相关
 
 
+> 注意点：一般情况下加密解密的串,对于算法而言都是以byte数组进出,我们为了就可以显示的传输存储，一般要做base64处理，切勿用16禁止或者其他方式，可以参考apache dcode库或者spring库等的做法
+
+
 ## 一、签名和验签
 
 数据在网络传输的时候，可能会被劫持，这个时候，不发份子可能会把数据进行修改。比如说，传递数据是"1",他修改为"1000"。这种是无法接收的。所以一般需要把书籍进行签名。签名后另一端再进行验证签名。
@@ -17,6 +20,25 @@
 #### 1.2、HmacSha1
 
 这个也是一个签名算法，比如开源的apollo就是用这个算法。HmacSha1Utils.signString(stringToSign, secret);这里的secret也是双方约定的一个随机字符串
+```
+public class HmacSha1Utils {
+  private static final String ALGORITHM_NAME = "HmacSHA1";
+  private static final String ENCODING = "UTF-8";
+  public static String signString(String stringToSign, String accessKeySecret) {
+    try {
+      Mac mac = Mac.getInstance(ALGORITHM_NAME);
+      mac.init(new SecretKeySpec(
+          accessKeySecret.getBytes(ENCODING),
+          ALGORITHM_NAME
+      ));
+      byte[] signData = mac.doFinal(stringToSign.getBytes(ENCODING));
+      return BaseEncoding.base64().encode(signData);
+    } catch (NoSuchAlgorithmException | UnsupportedEncodingException | InvalidKeyException e) {
+      throw new IllegalArgumentException(e.toString());
+    }
+  }
+}
+```
 
 
 #### 1.3、SHA256withRSA签名算法
