@@ -43,8 +43,6 @@ public class HmacSha1Utils {
 
 #### 1.3、SHA256withRSA签名算法
 
-* RSA是非对称加密
-
 公钥和私钥
 
 ## 二、加解密
@@ -53,8 +51,6 @@ public class HmacSha1Utils {
 * 密文 + 盐 + 算法 = 业务数据
 
 #### 2.1、AES加解密
-
-* AES对称加密
 
 ```
 golang例子：https://www.jianshu.com/p/9c1c8958b279
@@ -123,6 +119,7 @@ func main() {
 ```
  
 
+<<<<<<< HEAD
 #### 2.2、java语言利用RSA加解密和验签
 
 代码如下：
@@ -331,4 +328,7 @@ public class SignatureUtilTest {
 }
 
 ```
+=======
+
+>>>>>>> parent of f0aa510... 1
 
