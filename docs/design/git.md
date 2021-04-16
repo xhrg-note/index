@@ -25,3 +25,14 @@
 打tag
 
 * rocketmq-all-4.7.0这样
+
+
+
+
+## git使用技巧
+
+#### git合并commit
+1. 选中要合并的commit，sourcetree右键，重置到本次修改，选择混合模式。
+2. 提交，带上不要push
+3. 有强制push就强制，没有则用命令 git push -f
+4. 拉取最新的数据，推推拉拉到最新即可
