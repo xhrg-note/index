@@ -23,6 +23,7 @@
 - 架构设计
   - [微服务](e.md)
   - [git分支管理](design/git.md)
+  - [分层设计](design/layer.md)
 - 性能优化
   - [理论](perf/perf.md)
   - linux
