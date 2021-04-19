@@ -1,6 +1,5 @@
 ## top
 
-
 运行top出现如下信息，其中行号是我加的，为了说明方便：
 ```
 1. top - 14:01:10 up 67 days, 20 min,  2 users,  load average: 2.70, 2.34, 2.29
