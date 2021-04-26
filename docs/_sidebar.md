@@ -16,6 +16,7 @@
   - 数据库
     - mysql
       - [mysql](base/db/mysql/mysql.md)
+      - [elasticsearch](base/db/elasticsearch/es.md)
   - 服务框架
     - [dubbo](base/ms/dubbo.md)
     - [spring cloud](base/ms/sc.md)
