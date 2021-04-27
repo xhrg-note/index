@@ -14,13 +14,13 @@
     - redis
       - [redis](base/cache/redis/redis.md)
   - 数据库
-    - mysql
-      - [mysql](base/db/mysql/mysql.md)
-      - [elasticsearch](base/db/elasticsearch/es.md)
+    - [mysql](base/db/mysql/mysql.md)
   - 服务框架
     - [dubbo](base/ms/dubbo.md)
     - [spring cloud](base/ms/sc.md)
     - [spring cloud alibaba](base/ms/sca.md)
+  - 搜索
+    - [elasticsearch](base/db/elasticsearch/es.md)
 - 架构设计
   - [微服务](e.md)
   - [git分支管理](design/git.md)
