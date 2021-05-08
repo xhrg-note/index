@@ -17,7 +17,10 @@
 3. docker run -e ES_JAVA_OPTS="-Xms1024m -Xmx1024m" -e "discovery.type=single-node" -itd -p 9200:9200 -p 9300:9300 --name elasticsearch elasticsearch:7.12.0
 
 4. 访问：http://127.0.0.1:9200/
+
+5. curl -u elastic:changeme localhost:9200
 ```
+
 
 
 搭建kibana7.12.0
@@ -32,6 +35,7 @@
 搭建logstash7.12.0
 
 
+-e I18N.LOCALE=zh-CN
 
 
 
