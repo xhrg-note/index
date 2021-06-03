@@ -35,5 +35,8 @@
 ## 算法
 * raft -> https://github.com/apache/ratis
 
-## 未分类
+## 开源项目 - springboot产品
+* https://gitee.com/smallc/SpringBlade
+* http://ruoyi.vip/
+* https://www.renren.io/
 

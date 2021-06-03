@@ -1,3 +1,8 @@
+## 开源项目 - springboot产品
+* https://gitee.com/smallc/SpringBlade
+* http://ruoyi.vip/
+* https://www.renren.io/
+
 ## CICD
 * https://github.com/mgr9525/gokins/wiki
 * https://pangu.javamall.com.cn/
@@ -5,7 +10,6 @@
 ## 文档
 * 飞书
 * 石墨笔记
-
 
 ## nginx
 * nginx-config https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN
