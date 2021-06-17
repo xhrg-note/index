@@ -2,6 +2,16 @@
 
 > 导航方案
  * http://webstack.cc/cn/index.html
+ * https://github.com/hui-ho/WebStack-Laravel
+ * https://github.com/WebStackPage/WebStackPage.github.io
+ * https://github.com/zhuima/daohang
+ * https://github.com/Nikati/WebStack-Guns-NKT
+ * https://www.zdzn.net/page/web.html
+ * http://heige.chuangzaoshi.com/#3
+ * https://github.com/jsnjfz/WebStack-Guns
+
+
+ 
 
 > vue-element-admin
  * https://github.com/PanJiaChen/vue-element-admin
