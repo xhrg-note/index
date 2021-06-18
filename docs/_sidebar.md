@@ -6,6 +6,7 @@
     - [etcd](base/register/etcd/etcd.md)
   - 消息队列
     - RocketMQ
+      - [RocketMQ功能和升级](base/mq/rocketmq/rocketmq_upgrade.md)
       - [RocketMQ实战](base/mq/rocketmq/rocketmq_action/rocketmq_action.md)
       - [RocketMQ存储](base/mq/rocketmq/rocketmq_store.md)
   - 网关
