@@ -20,3 +20,7 @@
 
 ## 调度
 * https://github.com/ouqiang/gocron (golang服务端)
+
+
+## 运维工具
+* https://github.com/jumpserver/jumpserver (支持web终端,非常好)
